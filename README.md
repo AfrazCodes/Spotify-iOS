@@ -2,6 +2,9 @@
 
 Full featured Spotify like app written in Swift 5 with MVVM architecture.
 
+![Spotify Client iOS Academy](https://raw.githubusercontent.com/AfrazCodes/Spotify-iOS/master/screenshots1.png)
+![Spotify Client iOS Academy](https://raw.githubusercontent.com/AfrazCodes/Spotify-iOS/master/screenshots2.png)
+
 ## Features
 - Official Spotify API Use
 - Playlists, Playlist Creation,
