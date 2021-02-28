@@ -16,12 +16,6 @@ Full featured Spotify like app written in Swift 5 with MVVM architecture.
 - Browse Categories
 - Categorical Playlists
 
-## Video Series
-
-Watch the entire video series where we build this project together on YouTube (iOS Academy):
-
-https://www.youtube.com/watch?v=im5n5gpTHTM&list=PL5PR3UyfTWve9ZC7Yws0x6EGjBO2FGr0o&ab_channel=iOSAcademy
-
 ## Notes
 
 This code is free to use. Note that I have removed the Client Id and Client Secret from the AuthManager that I originally developed this with.
