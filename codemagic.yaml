@@ -6,6 +6,8 @@ workflows:
     scripts:
       - name: CICD Started
         script: echo "Welcome to your CICD set up"
+      - name: Build Spotify
+        script: xcodebuild build -workspace "Spotify.xcworkspace" -scheme "Spotify" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
       email:
         recipients:
