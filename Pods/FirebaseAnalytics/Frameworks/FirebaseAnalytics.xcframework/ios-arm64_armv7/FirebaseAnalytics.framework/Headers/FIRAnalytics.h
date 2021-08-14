@@ -97,37 +97,6 @@ NS_SWIFT_NAME(Analytics)
 ///     non-empty and no more than 256 characters long. Setting userID to nil removes the user ID.
 + (void)setUserID:(nullable NSString *)userID;
 
-/// This method was deprecated in Firebase 6.29.0.
-///
-/// Sets the current screen name, which specifies the current visual context in your app. This helps
-/// identify the areas in your app where users spend their time and how they interact with your app.
-/// Must be called on the main thread.
-///
-/// Note that screen reporting is enabled automatically and records the class name of the current
-/// UIViewController for you without requiring you to call this method. The class name can
-/// optionally be overridden by calling this method in the viewDidAppear callback of your
-/// UIViewController and specifying the screenClassOverride parameter.
-/// `setScreenName:screenClass:` must be called after `[super viewDidAppear:]`.
-///
-/// If your app does not use a distinct UIViewController for each screen, you should call this
-/// method and specify a distinct screenName each time a new screen is presented to the user.
-///
-/// The screen name and screen class remain in effect until the current UIViewController changes or
-/// a new call to setScreenName:screenClass: is made.
-///
-/// @warning If you override `viewDidAppear:` in your UIViewController but do not call
-///     `[super viewDidAppear:]`, that screen class will not be tracked.
-///
-/// @param screenName The name of the current screen. Should contain 1 to 100 characters. Set to nil
-///     to clear the current screen name.
-/// @param screenClassOverride The name of the screen class. Should contain 1 to 100 characters. By
-///     default this is the class name of the current UIViewController. Set to nil to revert to the
-///     default class name.
-+ (void)setScreenName:(nullable NSString *)screenName
-          screenClass:(nullable NSString *)screenClassOverride
-    DEPRECATED_MSG_ATTRIBUTE(
-        "Use +[FIRAnalytics logEventWithName:kFIREventScreenView parameters:] instead.");
-
 /// Sets whether analytics collection is enabled for this app on this device. This setting is
 /// persisted across app sessions. By default it is enabled.
 ///

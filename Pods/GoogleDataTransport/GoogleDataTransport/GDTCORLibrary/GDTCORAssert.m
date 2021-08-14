@@ -24,8 +24,9 @@ GDTCORAssertionBlock GDTCORAssertionBlockToRunInstead(void) {
     if (assertionBlockSEL) {
       IMP assertionBlockIMP = [GDTCORAssertClass methodForSelector:assertionBlockSEL];
       if (assertionBlockIMP) {
-        GDTCORAssertionBlock assertionBlock = ((GDTCORAssertionBlock(*)(id, SEL))assertionBlockIMP)(
-            GDTCORAssertClass, assertionBlockSEL);
+        GDTCORAssertionBlock assertionBlock =
+            ((GDTCORAssertionBlock(*)(id, SEL))assertionBlockIMP)(GDTCORAssertClass,
+                                                                  assertionBlockSEL);
         if (assertionBlock) {
           return assertionBlock;
         }
