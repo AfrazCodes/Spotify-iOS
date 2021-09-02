@@ -9,7 +9,9 @@ workflows:
           xcode-project run-tests \
               --workspace Spotify.xcworkspace \
               --scheme Spotify \
+              --clean
               --device "iPhone 11"
+          test_report: build/ios/test/*.xml
     publishing:
       email:
         recipients:
