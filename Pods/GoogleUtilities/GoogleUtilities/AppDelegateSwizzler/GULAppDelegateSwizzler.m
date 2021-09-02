@@ -149,10 +149,10 @@ static NSString *const kGULDidReceiveRemoteNotificationWithCompletionSEL =
     return;
   }
   [[GULAppDelegateSwizzler sharedApplication]
-      addObserver:self
-       forKeyPath:kGULAppDelegateKeyPath
-          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
-          context:nil];
+    addObserver:self
+     forKeyPath:kGULAppDelegateKeyPath
+        options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+        context:nil];
   _isObserving = YES;
 }
 

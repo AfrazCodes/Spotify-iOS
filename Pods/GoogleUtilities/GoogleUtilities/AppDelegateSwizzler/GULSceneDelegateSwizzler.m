@@ -92,10 +92,10 @@ static NSString *const kGULSceneDelegatePrefix = @"GUL_";
         return;
       }
       [[NSNotificationCenter defaultCenter]
-          addObserver:self
-             selector:@selector(handleSceneWillConnectToNotification:)
-                 name:UISceneWillConnectNotification
-               object:nil];
+        addObserver:self
+           selector:@selector(handleSceneWillConnectToNotification:)
+               name:UISceneWillConnectNotification
+             object:nil];
     }
   });
 #endif  // UISCENE_SUPPORTED
