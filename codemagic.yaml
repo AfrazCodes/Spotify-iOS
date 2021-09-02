@@ -10,8 +10,7 @@ workflows:
               --workspace Spotify.xcworkspace \
               --scheme Spotify \
               --clean
-              --device "iPhone 11"
-          test_report: build/ios/test/*.xml
+              --device "iPhone 11" --verbose
     publishing:
       email:
         recipients:
