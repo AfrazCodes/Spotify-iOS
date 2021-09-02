@@ -8,9 +8,7 @@ workflows:
         script: |
           xcode-project run-tests \
               --workspace Spotify.xcworkspace \
-              --scheme Spotify \
-              --clean
-              --device "iPhone 11" --verbose
+              --scheme Spotify
     publishing:
       email:
         recipients:
