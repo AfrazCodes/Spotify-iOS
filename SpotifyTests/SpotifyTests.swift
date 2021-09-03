@@ -22,4 +22,20 @@ class SpotifyTests: XCTestCase {
         XCTAssertEqual(viewModel.numberOfTracks, 12)
         XCTAssertEqual(viewModel.artistName, "Drake")
     }
+
+    func testFeaturedPlaylistCellViewModel() {
+        let viewModel = FeaturedPlaylistCellViewModel(
+            name: "Summer Vibes",
+            artworkURL: nil,
+            creatorName: "All American"
+        )
+        XCTAssertEqual(viewModel.name, "Summer Vibes")
+        XCTAssertEqual(viewModel.creatorName, "All American")
+        XCTAssertNil(viewModel.artworkURL)
+    }
+
+    func testMath() {
+        XCTAssertEqual(7+2, 9)
+        XCTAssertEqual(12 - 2, 10)
+    }
 }
